@@ -36,9 +36,9 @@ def sumy_summarize(docx):
 #function for spacy summary
 def spacy_process(text):
     #nlp = en_core_web_sm.load() #changed for 8 march
-    import en_core_web_sm
-    nlp = en_core_web_sm.load()
-    #nlp = spacy.load('en_core_web_sm')
+    #import en_core_web_sm
+    #nlp = en_core_web_sm.load()
+    nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
     #stopword = list(STOP_WORDS)
 
