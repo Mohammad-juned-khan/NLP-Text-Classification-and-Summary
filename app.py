@@ -4,7 +4,6 @@ import streamlit as st
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
-import en_core_web_sm
 
 from heapq import nlargest
 punctuation=punctuation+"\n"+" "+"  "
@@ -35,8 +34,8 @@ def sumy_summarize(docx):
 
 #function for spacy summary
 def spacy_process(text):
-    nlp = en_core_web_sm.load() #changed for 8 march
-    #nlp = spacy.load('en_core_web_sm')
+    #nlp = en_core_web_sm.load() #changed for 8 march
+    nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
     #stopword = list(STOP_WORDS)
 
