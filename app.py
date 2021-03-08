@@ -18,8 +18,8 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 import re
 import pickle
 import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -36,6 +36,7 @@ def sumy_summarize(docx):
 #function for spacy summary
 def spacy_process(text):
     #nlp = en_core_web_sm.load() #changed for 8 march
+    import en_core_web_sm
     nlp = spacy.load('en_core_web_sm')
     doc = nlp(text)
     #stopword = list(STOP_WORDS)
